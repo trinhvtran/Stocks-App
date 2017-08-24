@@ -1,0 +1,12 @@
+[
+    {
+        "symbol": "AAPL",
+        "companyName": "Apple",
+        "price": 169.72
+    },
+    {
+        "symbol": "AMZN",
+        "companyName": "Amazon",
+        "price": 969.11
+    }
+]

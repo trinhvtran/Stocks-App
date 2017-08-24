@@ -1,0 +1,28 @@
+<div class='panel panel-primary'>
+  <div class='panel-heading'>
+    {{ pageTitle }}
+  </div>
+  <div class='panel-body'>
+  <div class='table-responsive'>
+    <table class='table' *ngIf='stocks && stocks.length'>
+      <thead>
+        <tr>
+          <th>Symbol</th>
+          <th>Company Name</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor='let stock of stocks'>
+          <td>{{ stock.symbol | uppercase }}</td>
+          <td>{{ stock.companyName }}</td>
+          <td>{{ stock.price | currency:'USD':true:'1.2-2'}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+<div *ngIf='errorMessage' class='alert alert-danger'>
+  Error: {{ errorMessage }}
+</div>
